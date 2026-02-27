@@ -10,17 +10,20 @@ export default function Home() {
     message: "Olá, Terra! Recebemos sua mensagem e estamos prontos para conhecê-los!",
   };
 
-  const handleContact = () => {
-    setStatusText("Enviando mensagem...");
+  const delay = (ms: number) =>
+    new Promise(resolve => setTimeout(resolve, ms));
+    const handleContact = async () => {
+    try {
+      setStatusText("Enviando mensagem...");
+      await delay(1200);
 
-    setTimeout(() => {
       setStatusText("Recebendo resposta...");
+      await delay(1200);
 
-      setTimeout(() => {
-        setStatusText(`Mensagem recebida: ${mission.message}`);
-      }, 1200);
-
-    }, 1200);
+      setStatusText(`Mensagem recebida: ${mission.message}`);
+    } catch (error) {
+      setStatusText("Erro ao estabelecer contato");
+    }
   };
 
   return (
