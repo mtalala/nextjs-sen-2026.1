@@ -26,7 +26,7 @@ export default function Home() {
       setStatusText("Recebendo resposta...");
 
       const [response] = await Promise.all([
-        fetch("http://localhost:8080/api/mission", {
+        fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/mission`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
