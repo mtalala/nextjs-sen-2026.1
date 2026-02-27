@@ -12,17 +12,30 @@ export default function Home() {
 
   const delay = (ms: number) =>
     new Promise(resolve => setTimeout(resolve, ms));
-    const handleContact = async () => {
+  
+  const handleContact = async () => {
     try {
       setStatusText("Enviando mensagem...");
       await delay(1200);
 
       setStatusText("Recebendo resposta...");
-      await delay(1200);
 
-      setStatusText(`Mensagem recebida: ${mission.message}`);
-    } catch (error) {
-      setStatusText("Erro ao estabelecer contato");
+      const response = await fetch("http://localhost:8080/api/mission", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro na API");
+      }
+
+      const data = await response.json();
+
+      setStatusText(`Mensagem recebida: ${data.message}`);
+    } catch {
+      setStatusText("Falha ao comunicar com a missão");
     }
   };
 
