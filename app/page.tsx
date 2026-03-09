@@ -76,7 +76,7 @@ export default function Home() {
         <button
           onClick={handleContact}
           disabled={isLoading}
-          className="text-white text-sm font-semibold py-2 px-3 bg-green-700 rounded-[8px] disabled:opacity-50"
+          className="text-white text-sm font-semibold py-2 px-3 bg-green-700 rounded-[8px] hover:opacity-80 transition-1000 transition-opacity disabled:opacity-50"
         >
           Fazer contato
         </button>
