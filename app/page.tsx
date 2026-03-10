@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FolderArchive } from "lucide-react";
+import { Folder } from "lucide-react";
 
 type MissionResponse = {
   message: string;
@@ -58,17 +58,17 @@ export default function Home() {
         Missão Espacial
       </h1>
 
-      <div className="w-[800px] bg-[#262629] rounded-[24px] mt-10 px-8 py-8 space-y-4">
-        <p className="text-white text-sm font-semibold">
+      <div className="w-[750px] bg-[#262629] rounded-[24px] mt-10 px-8 py-8 space-y-4">
+        <p className="text-white text-[13px] font-semibold">
           Upload de Arquivo
         </p>
 
         <div className="flex items-center gap-2 bg-[#414141] rounded-[7px] w-fit py-[10px] px-[15px]">
           <div className="bg-[#787878] px-[10px] py-[10px] rounded-[6px]">
-            <FolderArchive className="text-white" />
+            <Folder className="text-white" />
           </div>
 
-          <p className="text-white text-sm font-semibold">
+          <p className="text-white text-[13px] font-semibold">
             MensagemDaTerra.jpg
           </p>
         </div>
@@ -76,14 +76,14 @@ export default function Home() {
         <button
           onClick={handleContact}
           disabled={isLoading}
-          className="transition-opacity duration-300 text-white text-sm font-semibold py-2 px-3 bg-green-700 rounded-[8px] hover:opacity-80 disabled:opacity-50"
+          className="transition-opacity duration-300 text-white text-[13px] font-semibold py-2 px-3 bg-green-700 rounded-[8px] hover:opacity-80 disabled:opacity-50"
         >
           Fazer contato
         </button>
       </div>
 
-      <div className="w-[800px] h-[300px] bg-[#2f2e33] mt-10 border border-[#8f8f8f] px-[10px] py-[10px]">
-        <p className="text-white text-sm font-semibold">
+      <div className="w-[750px] h-[300px] bg-[#2f2e33] mt-6 border border-[#8f8f8f] px-[10px] py-[10px]">
+        <p className="text-white text-[13px] font-semibold">
           {statusText}
         </p>
       </div>
