@@ -54,7 +54,7 @@ export default function Home() {
       className="flex flex-col items-center justify-center h-screen w-screen bg-cover bg-center"
       style={{ backgroundImage: "url('/unsplashspace.jpg')" }}
     >
-      <h1 className="fixed top-12 text-white text-5xl font-bold">
+      <h1 className="fixed top-12 text-white text-4xl font-bold">
         Missão Espacial
       </h1>
 
