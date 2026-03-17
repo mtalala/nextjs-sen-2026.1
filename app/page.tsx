@@ -63,7 +63,7 @@ export default function Home() {
           Upload de Arquivo
         </p>
 
-        <div className="flex items-center gap-2 bg-[#45454D] rounded-[7px] w-fit py-[10px] px-[15px]">
+        <div className="flex items-center gap-2 bg-[#434347] rounded-[7px] w-fit py-[10px] px-[15px]">
           <div className="bg-[#696970] px-[10px] py-[10px] rounded-[6px]">
             <Folder className="text-white" />
           </div>
