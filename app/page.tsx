@@ -69,7 +69,7 @@ export default function Home() {
           </div>
 
           <p className="text-white text-[13px] font-semibold">
-            MensagemDaTerra.jpg
+            MensagemDaTerra.mp4
           </p>
         </div>
 
